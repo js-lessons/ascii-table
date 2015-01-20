@@ -12,7 +12,7 @@
   },
   "devDependencies" : {
     "jasmine-node" : "2.0.0-beta4"
-  }
+  },
   "author": "",
   "license": "ISC"
 }
