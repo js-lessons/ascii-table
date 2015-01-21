@@ -46,7 +46,7 @@ describe('UnderlinedCell', function() {
         draw: function() { return ['inner text']; }
       }
 
-      spyOn(innerCell, 'draw').andCallThrough();
+      spyOn(innerCell, 'draw').and.callThrough();
     });
 
     it('draws inner object without last line', function() {
