@@ -32,6 +32,7 @@ Table.prototype.draw = function() {
     var blocks = row.map(function(cell, colNum) {
       return cell.draw(widths[colNum], heights[rowNum]);
     });
+
     return blocks[0].map(function(_, lineNo) {
       return drawLine(blocks, lineNo);
     }).join("\n");
