@@ -1,9 +1,4 @@
-function repeat(string, times) {
-  var result = "";
-  for (var i = 0; i < times; i++)
-    result += string;
-  return result;
-}
+var repeat = require('./utilities').repeat;
 
 function TextCell(text) {
   this.text = text.split("\n");
