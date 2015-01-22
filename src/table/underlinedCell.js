@@ -1,4 +1,4 @@
-var repeat = require('./utilities').repeat;
+var repeat = require('../utilities').repeat;
 
 function UnderlinedCell(inner) {
   this.inner = inner;

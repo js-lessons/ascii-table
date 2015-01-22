@@ -1,4 +1,4 @@
-var repeat = require('./utilities').repeat;
+var repeat = require('../utilities').repeat;
 
 function TextCell(text) {
   this.text = text.split("\n");

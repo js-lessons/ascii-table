@@ -1,4 +1,4 @@
-var UnderlinedCell = require('../src/UnderlinedCell');
+var UnderlinedCell = require('../../src/table/UnderlinedCell');
 
 describe('UnderlinedCell', function() {
   describe('interface', function() {

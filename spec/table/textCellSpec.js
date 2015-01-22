@@ -1,4 +1,4 @@
-var TextCell = require('../src/textCell');
+var TextCell = require('../../src/table/textCell');
 
 describe('TextCell', function() {
   describe('text', function() {

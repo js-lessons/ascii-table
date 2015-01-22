@@ -1,6 +1,6 @@
-var Table = require('../src/table'),
-  TextCell = require('../src/textCell'),
-  UnderlinedCell = require('../src/underlinedCell');
+var Table = require('../../src/table/table'),
+  TextCell = require('../../src/table/textCell'),
+  UnderlinedCell = require('../../src/table/underlinedCell');
 
 describe('Table', function() {
   var drawn = [
