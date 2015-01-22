@@ -6,7 +6,6 @@ var STUDENTS = [
   { Name: 'Nikodemus Siivola', Github: 'nikodemus' },
   { Name: 'Max Bolingbroke', Github: 'batterseapower' },
   { Name: 'Daniel Spiewak', Github: 'djspiewak' },
-  { Name: 'Scott Vokes', Github: 'silentbicycle' },
   { Name: 'Rich Hickey', Github: 'richhickey' },
   { Name: 'David Nolen', Github: 'swannodette' }
 ]
