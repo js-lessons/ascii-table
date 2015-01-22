@@ -14,6 +14,8 @@ function dataTable(data) {
 
   var body = data.map(function(row) {
     return keys.map(function(name) {
+       var value = row[name];
+
       if (typeof value == "number")
         return new RTextCell(String(value));
       else
