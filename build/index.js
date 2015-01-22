@@ -14,7 +14,10 @@ function dataTable(data) {
 
   var body = data.map(function(row) {
     return keys.map(function(name) {
-      return new TextCell(String(row[name]));
+      if (typeof value == "number")
+        return new RTextCell(String(value));
+      else
+        return new TextCell(String(value));
     });
   });
 
