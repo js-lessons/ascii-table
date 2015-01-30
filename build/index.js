@@ -1,11 +1,17 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 (function (global){
+global.Table = require('./table/table'),
+global.TextCell = require('./table/textCell'),
+global.UnderlinedCell = require('./table/underlinedCell'),
+global.objectToRows = require('./objectToRows');
+
+}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{"./objectToRows":2,"./table/table":3,"./table/textCell":4,"./table/underlinedCell":5}],2:[function(require,module,exports){
 var Table = require('./table/table'),
   TextCell = require('./table/textCell'),
-  UnderlinedCell = require('./table/underlinedCell'),
-  STUDENTS = require('./students');
+  UnderlinedCell = require('./table/underlinedCell');
 
-function dataTable(data) {
+module.exports = function(data) {
   var keys = Object.keys(data[0]);
 
   var headers = keys.map(function(name) {
@@ -26,25 +32,7 @@ function dataTable(data) {
   return [headers].concat(body);
 }
 
-global.studentsTable = new Table(dataTable(STUDENTS)).draw();
-
-}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./students":2,"./table/table":3,"./table/textCell":4,"./table/underlinedCell":5}],2:[function(require,module,exports){
-var STUDENTS = [
-  { Name: 'Douglas Crockford', Github: 'douglascrockford' },
-  { Name: 'Tony Morris', Github: 'tonymorris' },
-  { Name: 'Slava Pestov', Github: 'slavapestov' },
-  { Name: 'Graydon Hoare', Github: 'graydon' },
-  { Name: 'Nikodemus Siivola', Github: 'nikodemus' },
-  { Name: 'Max Bolingbroke', Github: 'batterseapower' },
-  { Name: 'Daniel Spiewak', Github: 'djspiewak' },
-  { Name: 'Rich Hickey', Github: 'richhickey' },
-  { Name: 'David Nolen', Github: 'swannodette' }
-]
-
-module.exports = STUDENTS;
-
-},{}],3:[function(require,module,exports){
+},{"./table/table":3,"./table/textCell":4,"./table/underlinedCell":5}],3:[function(require,module,exports){
 function rowHeights(rows) {
   return rows.map(function(row) {
     return row.reduce(function(max, cell) {

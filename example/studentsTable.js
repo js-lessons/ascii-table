@@ -1,3 +1,5 @@
+require('../src/index');
+
 var STUDENTS = [
   { Name: 'Douglas Crockford', Github: 'douglascrockford' },
   { Name: 'Tony Morris', Github: 'tonymorris' },
@@ -10,4 +12,4 @@ var STUDENTS = [
   { Name: 'David Nolen', Github: 'swannodette' }
 ]
 
-module.exports = STUDENTS;
+console.log(new Table(objectToRows(STUDENTS)).draw());
